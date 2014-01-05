@@ -2,6 +2,7 @@
 RED: #993d3d
 BLUE: #294767
 GREEN: #5c7738
+LIGHT GREEN: #78a04d
 */
 
 #main {
@@ -111,6 +112,38 @@ fieldset[disabled] .btn-vote.active {
 	border-color: #383838;
 }
 
+.btn-donate {
+	color: #ffffff;
+	background-color: #294767;
+	border-color: #294767;
+}
+
+.btn-donate:hover,
+.btn-donate:focus,
+.btn-donate:active,
+.btn-donate.active {
+	color: #ffffff;
+	background-color: #223a55;
+	border-color: #1a2e43;
+}
+
+.btn-donate.disabled:hover,
+.btn-donate.disabled:focus,
+.btn-donate.disabled:active,
+.btn-donate.disabled.active,
+.btn-donate[disabled]:hover,
+.btn-donate[disabled]:focus,
+.btn-donate[disabled]:active,
+.btn-donate[disabled].active,
+fieldset[disabled] .btn-donate:hover,
+fieldset[disabled] .btn-donate:focus,
+fieldset[disabled] .btn-donate:active,
+fieldset[disabled] .btn-donate.active {
+	color: #ffffff;
+	background-color: #294767;
+	border-color: #294767;
+}
+
 .app-icon {
 	width: 125px;
 	height: 125px;
@@ -119,7 +152,7 @@ fieldset[disabled] .btn-vote.active {
 }
 
 .app-icon:hover {
-	border-color: #4d84bf;
+	border-color: #78a04d;
 }
 
 h1 {
@@ -144,16 +177,12 @@ h4 {
 	color: #666666;
 }
 
-h4 > small > a {
-	color: #999999;
-}
-
 hr {
 	border-color: #d7d7d7;
 }
 
 a {
-	color: #4d84bf;
+	color: #78a04d;
 }
 
 a:link {
@@ -166,7 +195,7 @@ a:visited {
 
 a:hover {
 	text-decoration:none;
-	color: #294767;
+	color: #5c7738;
 }
 
 a:active {
