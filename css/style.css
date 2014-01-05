@@ -21,7 +21,7 @@ GREEN: #5c7738
 
 #copyright {
 	font-size: 11px;
-	color: #666666;
+	color: #999999;
 	line-height: 24px;
 }
 
@@ -138,6 +138,16 @@ h5 {
 	font-weight: normal;
 }
 
+h4 {
+	margin-top: 0px;
+	padding-top: 0px;
+	color: #666666;
+}
+
+h4 > small > a {
+	color: #999999;
+}
+
 hr {
 	border-color: #d7d7d7;
 }
@@ -178,10 +188,5 @@ a:active {
 
 	h5 {
 		font-size: 14px;
-	}
-
-	.app-icon {
-		width: 100px;
-		height: 100px;
 	}
 }
