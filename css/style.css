@@ -6,11 +6,11 @@ GREEN: #5c7738
 
 #main {
 	margin-top: 10px;
-	margin-bottom: 25px;
+	margin-bottom: 20px;
 }
 
 #content {
-	padding-top: 40px;
+	padding-top: 10px;
 }
 
 #hb {
@@ -26,8 +26,8 @@ GREEN: #5c7738
 }
 
 #section {
-	padding-top: 8px;
-	padding-bottom: 22px;
+	padding-top: 4px;
+	padding-bottom: 20px;
 }
 
 body p {
@@ -44,14 +44,6 @@ body p {
 	margin-right: auto; 
 	display: block;
 	text-align: center;
-}
-
-.media {
-	padding-bottom: 10px;
-}
-
-.media-heading {
-	margin-bottom: 0px;
 }
 
 .btn-fart {
@@ -122,6 +114,8 @@ fieldset[disabled] .btn-vote.active {
 .app-icon {
 	width: 125px;
 	height: 125px;
+	margin-left: 10px;
+	margin-bottom: 10px;
 }
 
 .app-icon:hover {
