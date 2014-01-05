@@ -5,6 +5,14 @@ GREEN: #5c7738
 LIGHT GREEN: #78a04d
 */
 
+body {
+	background-color: #96accd;
+	background-image:url('/img/capitol2-blur.jpg');
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-attachment: scroll;
+}
+
 #main {
 	margin-top: 10px;
 	margin-bottom: 20px;
@@ -21,15 +29,17 @@ LIGHT GREEN: #78a04d
 	padding-bottom: 2px;
 }
 
-#copyright {
+#copyright,
+#copyright > a:link {
 	font-size: 11px;
 	color: #999999;
 	line-height: 24px;
+	border-color: #999999;
 }
 
 #section {
 	padding-top: 4px;
-	padding-bottom: 20px;
+	padding-bottom: 25px;
 }
 
 body p {
@@ -152,10 +162,6 @@ fieldset[disabled] .btn-donate.active {
 	margin-bottom: 10px;
 }
 
-.app-icon:hover {
-	border-color: #78a04d;
-}
-
 h1 {
 	font-size: 55px;
 	font-weight: normal;
@@ -175,32 +181,27 @@ h5 {
 h4 {
 	margin-top: 0px;
 	padding-top: 0px;
-	color: #666666;
-}
-
-hr {
-	border-color: #d7d7d7;
 }
 
 a {
-	color: #78a04d;
+	color: #223a55;
+}
+
+a:link,
+a:visited,
+a:active,
+a:hover {
+	text-decoration:none;
 }
 
 a:link {
-	text-decoration:none;
+  	border-bottom: 1px #223a55 dotted;
 }
 
-a:visited {
-	text-decoration:none;
-}
-
-a:hover {
-	text-decoration:none;
-	color: #5c7738;
-}
-
-a:active {
-	text-decoration:none;
+a:hover,
+#copyright > a:hover {
+	color: #3d6a99;
+	border-color: #3d6a99;
 }
 
 @media (max-width: 480px) and (max-width: 568px) {
