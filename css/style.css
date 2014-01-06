@@ -33,7 +33,6 @@ body {
 #copyright,
 #copyright > a:link {
 	font-size: 11px;
-	color: #999999;
 	line-height: 24px;
 	border-color: #999999;
 }
@@ -215,7 +214,7 @@ a:hover,
 	}
 
 	h1 {
-		font-size: 38px;
+		font-size: 36px;
 	}
 
 	h5 {
