@@ -8,6 +8,7 @@ function did_click_fart_button (btn) {
 	addAudioSource('#src_mp3', title, 'mp3');
 	addAudioSource('#src_ogg', title, 'ogg');
 
+	document.getElementById('audioplayer').load();
 	document.getElementById('audioplayer').play();
 }
 
