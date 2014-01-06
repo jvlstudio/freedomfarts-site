@@ -4,9 +4,6 @@ function did_click_fart_button (btn) {
 	$('.glyphicon', btn).remove();
 
 	var title = $(btn).text().toLowerCase();
-
-	console.log("Playing " + title + "...");
-	
 	var player = document.getElementById('audioplayer');
 
 	if (!player.paused && CURRENTLY_PLAYING === title) {
@@ -27,7 +24,6 @@ function did_click_fart_button (btn) {
 	$(btn).prepend('<span class="glyphicon glyphicon-play">&nbsp;</span>');
 
 	$(player).on('ended', function() {
-		console.log("Finished " + title + "!");
 		$('.glyphicon', btn).remove();
 		$(player).off();
 	});
