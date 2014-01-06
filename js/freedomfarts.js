@@ -1,12 +1,12 @@
 var CURRENTLY_PLAYING;
 
 function did_click_fart_button (btn) {
-	$('.glyphicon', btn).remove();
+	$('.glyphicon', CURRENTLY_PLAYING).remove();
 
 	var title = $(btn).text().toLowerCase();
 	var player = document.getElementById('audioplayer');
 
-	if (!player.paused && CURRENTLY_PLAYING === title) {
+	if (!player.paused && CURRENTLY_PLAYING === btn) {
 		player.pause();
 		player.currentTime = 0;
 		$('.glyphicon', btn).remove();
@@ -19,7 +19,7 @@ function did_click_fart_button (btn) {
 
 	player.load();
 	player.play();
-	CURRENTLY_PLAYING = title;
+	CURRENTLY_PLAYING = btn;
 
 	$(btn).prepend('<span class="glyphicon glyphicon-play">&nbsp;</span>');
 
