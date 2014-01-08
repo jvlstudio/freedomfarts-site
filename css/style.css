@@ -34,7 +34,6 @@ body {
 #copyright > a:link {
 	font-size: 11px;
 	line-height: 24px;
-	border-color: #999999;
 }
 
 .section {
@@ -201,7 +200,6 @@ a:link {
 a:hover,
 #copyright > a:hover {
 	color: #3d6a99;
-	border-color: #3d6a99;
 }
 
 @media (max-width: 480px) and (max-width: 568px) {

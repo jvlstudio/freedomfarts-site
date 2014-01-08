@@ -49,4 +49,10 @@ function addAudioSourceType(srcid, title, ext) {
 function autoLoadFirstFart() {
 	var btn = document.getElementById('firstbtn');
 	did_click_fart_button(btn);
+
+	$('#firstbtn').popover('show');
+	
+	setTimeout(function() {
+		$('#firstbtn').popover('hide');
+	}, 4000);
 }
