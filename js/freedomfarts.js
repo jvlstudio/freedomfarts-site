@@ -50,9 +50,9 @@ function autoLoadFirstFart() {
 	var btn = document.getElementById('firstbtn');
 	did_click_fart_button(btn);
 
-	$('#firstbtn').popover('show');
+	$('#firstbtn').tooltip('show');
 	
 	setTimeout(function() {
-		$('#firstbtn').popover('destroy');
+		$('#firstbtn').tooltip('destroy');
 	}, 4000);
 }

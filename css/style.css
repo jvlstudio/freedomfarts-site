@@ -221,6 +221,15 @@ fieldset[disabled] .btn-gh.active {
 	margin-top: 20px;
 }
 
+.tooltip.in {
+	opacity: 0.75;
+	filter: alpha(opacity=75);
+}
+
+.tooltip-inner {
+	font-size: 15px;
+	max-width: 300px;
+}
 .app-icon {
 	width: 125px;
 	height: 125px;
