@@ -53,6 +53,6 @@ function autoLoadFirstFart() {
 	$('#firstbtn').popover('show');
 	
 	setTimeout(function() {
-		$('#firstbtn').popover('hide');
+		$('#firstbtn').popover('destroy');
 	}, 4000);
 }
