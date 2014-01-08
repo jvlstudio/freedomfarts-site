@@ -1,35 +1,52 @@
+var PLAYER = document.getElementById('audioplayer');
 var CURRENTLY_PLAYING;
 
 function did_click_fart_button (btn) {
 	$('.glyphicon', CURRENTLY_PLAYING).remove();
 
 	var title = $(btn).text().toLowerCase();
-	var player = document.getElementById('audioplayer');
 
-	if (!player.paused && CURRENTLY_PLAYING === btn) {
-		player.pause();
-		player.currentTime = 0;
-		$('.glyphicon', btn).remove();
+	if (!PLAYER.paused && CURRENTLY_PLAYING === btn) {
+		stopAudioForButton(btn);
 		return;
 	}
 
-	addAudioSource('#src_wav', title, 'wav');
-	addAudioSource('#src_mp3', title, 'mp3');
-	addAudioSource('#src_ogg', title, 'ogg');
+	addAudioSources(title);
 
-	player.load();
-	player.play();
+	playAudioForButton(btn);
+}
+
+function playAudioForButton(btn) {
+	PLAYER.load();
+	PLAYER.play();
 	CURRENTLY_PLAYING = btn;
 
 	$(btn).prepend('<span class="glyphicon glyphicon-play">&nbsp;</span>');
 
-	$(player).on('ended', function() {
+	$(PLAYER).on('ended', function() {
 		$('.glyphicon', btn).remove();
-		$(player).off();
+		$(PLAYER).off();
 	});
 }
 
-function addAudioSource(srcid, title, ext) {
+function stopAudioForButton(btn) {
+	PLAYER.pause();
+	PLAYER.currentTime = 0;
+	$('.glyphicon', btn).remove();
+}
+
+function addAudioSources(title) {
+	addAudioSourceType('#src_wav', title, 'wav');
+	addAudioSourceType('#src_mp3', title, 'mp3');
+	addAudioSourceType('#src_ogg', title, 'ogg');
+}
+
+function addAudioSourceType(srcid, title, ext) {
 	var src = $(srcid);
 	src.attr('src', '/audio/' + title + '.' + ext);
+}
+
+function autoLoadFirstFart() {
+	var btn = document.getElementById('firstbtn');
+	did_click_fart_button(btn);
 }
