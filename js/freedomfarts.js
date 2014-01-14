@@ -1,7 +1,11 @@
 var PLAYER = document.getElementById('audioplayer');
-var CURRENTLY_PLAYING;
+var CURRENTLY_PLAYING = null;
 
 function did_click_fart_button (btn) {
+	if (!CURRENTLY_PLAYING) {
+		$('#firstbtn').tooltip('destroy');
+	}
+
 	$('.glyphicon', CURRENTLY_PLAYING).remove();
 
 	var title = $(btn).text().toLowerCase();
@@ -46,13 +50,6 @@ function addAudioSourceType(srcid, title, ext) {
 	src.attr('src', '/audio/' + title + '.' + ext);
 }
 
-function autoLoadFirstFart() {
-	var btn = document.getElementById('firstbtn');
-	did_click_fart_button(btn);
-
+function onLoad() {
 	$('#firstbtn').tooltip('show');
-	
-	setTimeout(function() {
-		$('#firstbtn').tooltip('destroy');
-	}, 4000);
 }
