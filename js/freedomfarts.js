@@ -6,7 +6,7 @@ function did_click_fart_button (btn) {
 		$('#firstbtn').tooltip('destroy');
 	}
 
-	$('.glyphicon', CURRENTLY_PLAYING).remove();
+	$('.fa-music', CURRENTLY_PLAYING).remove();
 
 	var title = $(btn).text().toLowerCase();
 
@@ -25,10 +25,10 @@ function playAudioForButton(btn) {
 	PLAYER.play();
 	CURRENTLY_PLAYING = btn;
 
-	$(btn).prepend('<span class="glyphicon glyphicon-play">&nbsp;</span>');
+	$(btn).prepend('<span class="fa fa-music">&nbsp;&nbsp;</span>');
 
 	$(PLAYER).on('ended', function() {
-		$('.glyphicon', btn).remove();
+		$('.fa-music', btn).remove();
 		$(PLAYER).off();
 	});
 }
@@ -36,7 +36,7 @@ function playAudioForButton(btn) {
 function stopAudioForButton(btn) {
 	PLAYER.pause();
 	PLAYER.currentTime = 0;
-	$('.glyphicon', btn).remove();
+	$('.fa-music', btn).remove();
 }
 
 function addAudioSources(title) {
