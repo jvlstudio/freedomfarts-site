@@ -2,7 +2,7 @@
 
 [freedomfarts.com](http://www.freedomfarts.com)
 
-![freedomfarts]("https://raw.github.com/hexedbits/freedomfarts-site/master/ico/icon120.png")
+![icon](http://raw.github.com/hexedbits/freedomfarts-site/master/ico/icon120.png)
 
 ## License
 
